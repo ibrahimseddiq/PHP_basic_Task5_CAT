@@ -2,7 +2,7 @@
 function prime_number_checker($num) {
     if($num > 1) {
         if($num === 2) return true;
-        for($i = 2; $i <= sqrt($num); $i++) {
+        for($i = $num - 1; $i > 1; $i--) {
             if($num % $i === 0) {
                 return false;
             }
@@ -25,5 +25,5 @@ function prime_number_checker($num) {
     */
 }
 
-var_dump(prime_number_checker(1567928343920394874));
+var_dump(prime_number_checker(94874));
 var_dump(prime_number_checker(59));
